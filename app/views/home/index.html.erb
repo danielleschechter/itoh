@@ -1,5 +1,5 @@
-<h1>Instagram Lookup</h1>
-  <% @popular.each do |popular| %>
+<h1>Twitter</h1>
+  <!-- <% @popular.each do |popular| %>
   <div class="col-sm-12 col-md-4">
     <div class="thumbnail">
       <%= image_tag popular.images.low_resolution.url %>
@@ -9,4 +9,16 @@
       </div>
     </div>
   </div>
-<% end %>
+<% end %> -->
+
+  <% @tweets.each do |tweet| %>
+       
+       <%= tweet.user.screen_name %> :
+       <br/>
+       <%= tweet.text %> 
+       <br/>
+       <br/>
+        
+  <% end %>
+
+
