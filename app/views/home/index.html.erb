@@ -11,14 +11,17 @@
   </div>
 <% end %> -->
 
-  <% @tweets.each do |tweet| %>
+  <% @tweetsT.each do |tweet| %>
        <hr/>
        <a href="<%= tweet.user.url %>" target="_blank"><img src=" <%= tweet.user.profile_image_url %>" /> @<%= tweet.user.screen_name %></a>
         :
        <br/>
        <br/>
-       <%= tweet.text %> 
+       <%= tweet.entity.uri %>
        <br/>
+       <br/>
+       <%= tweet.text %> 
+              <br/>
        <br/>
        <p><a href="<%= tweet.url %>" target="_blank"> View Tweet</a></p>
        <hr/>
